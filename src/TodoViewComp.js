@@ -12,45 +12,45 @@ import {
   //faFloppyDisk,
   faArrowRotateBack,
   faSquareXmark,
-  faPlus
+  faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faTrashCan,
   faPenToSquare,
   faFloppyDisk,
   faSquare,
-  faSquareCheck
+  faSquareCheck,
 } from "@fortawesome/free-regular-svg-icons";
 
 const arrayObjects = [
   {
     id: 1,
-    text: "Apliet puķes",
+    text: "Apliet puķes un kaktusus",
     completed: false,
     deleted: false,
-    isEdite: false
+    isEdite: false,
   },
   {
     id: 2,
     text: "Notīrīt palodzes",
     completed: false,
     deleted: false,
-    isEdite: false
+    isEdite: false,
   },
   {
     id: 3,
     text: "Izpildīt mājasdarbus",
     completed: false,
     deleted: false,
-    isEdite: false
+    isEdite: false,
   },
   {
     id: 4,
     text: "Uzprogrammēt aplikāciju",
     completed: false,
     deleted: false,
-    isEdite: false
-  }
+    isEdite: false,
+  },
 ];
 
 export default function TodoViewComp() {
@@ -163,7 +163,7 @@ export default function TodoViewComp() {
       text: InputText,
       completed: false,
       deleted: false,
-      isEdite: false
+      isEdite: false,
     };
     setTodoList([...todoList, newTodoItem]);
     setInputText("");
