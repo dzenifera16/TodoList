@@ -1,0 +1,292 @@
+/*:root {
+  --primary-color: #386bc0; 863A6F  484c7f
+  --secondary-color: rgb(239, 241, 242);
+  --completed-color: green;
+  --todo-text-color: black;
+  --todo-background-color: #f7f7f7;
+  --button-active-color: red;
+  --todo-shadow-color: rgb(0, 0, 0, 20%);
+}
+
+
+.InputText::-webkit-input-placeholder {
+  font-size: 15px;
+  font-family: FontAwesome;
+  vertical-align: bottom;
+
+  color: var(--placeholder-color);
+}
+.InputText::-moz-placeholder {
+  font-family: FontAwesome;
+
+  color: var(--placeholder-color);
+}
+
+.InputText:-ms-input-placeholder {
+  font-family: FontAwesome;
+  font-weight: normal;
+  text-align: left;
+  overflow: visible;
+  vertical-align: bottom;
+  display: inline-block !important;
+  padding-left: 5px;
+  padding-top: 5px;
+  color: var(--placeholder-color);
+}
+*/
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+:root {
+  --primary-color: #e38b29;
+  --secondary-color: #ffd8a9;
+  --completed-color: #095a09;
+  --todo-text-color: rgb(6, 10, 1);
+  --todo-background-color: #fdeedc;
+  --todo-input-background-color: #f1a661;
+  --button-active-color: #faf7f7;
+  --btnStyle2-background-hover-color: rgb(249, 206, 223, 20%);
+  --btn-text-hover-color: #ee8308;
+  --btn-icon-color: #021810;
+  --todo-shadow-color: rgb(0, 0, 0, 20%);
+  --todo-btn-shadow-color: rgb(0, 0, 0, 10%);
+  --todo-btn-active: rgb(75, 78, 75, 20%);
+  --RowItem-input-shadow-color: rgb(241, 166, 97, 0.3);
+  --button-style-hover: #f1e9e9;
+  --button-style-active: #e6d9d9;
+  --placeholder-color: rgb(58, 60, 47);
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--placeholder-color);
+  font-size: 14px;
+  opacity: 1; /* Firefox */
+}
+
+.MainView {
+  text-align: center;
+  background-color: var(--secondary-color);
+  width: 700px;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 400px;
+}
+
+.TodoItemTextDeleted {
+  text-decoration: line-through red;
+  font-size: 20px;
+}
+
+.TodoItemTextCompleted {
+  font-size: 20px;
+  color: var(--completed-color);
+  font-weight: bold;
+}
+
+.TodoItemText {
+  color: var(--todo-text-color);
+}
+.TitleView {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+.TitleIconStyle {
+  font-size: 20px;
+  color: var(--primary-color);
+  border: var(--primary-color);
+  border-width: 3px;
+  border-style: solid;
+  padding: 5px;
+}
+.TitleStyle {
+  font-size: 28px;
+  margin-left: 10px;
+  color: var(--primary-color);
+  font-weight: bold;
+  vertical-align: center;
+  text-decoration: underline;
+}
+.RowStyle {
+  margin-top: 10px;
+}
+
+.RowInputStyle {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+.RowInputStyle1 {
+  text-align: left;
+  border-radius: 4px;
+  padding: 5px;
+  border: none;
+  background-color: var(--todo-input-background-color);
+  display: flex;
+  flex: 5%;
+  font-size: 2rem;
+  justify-content: flex-end;
+}
+.RowInputStyle2 {
+  text-align: right;
+  padding: 5px;
+}
+.InputText {
+  padding: 5px 3px;
+  border-radius: 5px;
+  border: none;
+  width: 400px;
+  outline: none;
+  color: #000000;
+  background-color: var(--todo-input-background-color);
+}
+.inputIcon {
+  color: var(--placeholder-color);
+  padding: 6px 3px;
+  font-size: 15px;
+}
+
+.BtnStyle2 {
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  font-size: 12px;
+
+  border-width: 1px;
+  font-weight: bold;
+  padding: 5px 15px;
+  cursor: pointer;
+  margin: -1;
+}
+.BtnStyle2:hover {
+  font-size: 13px;
+  border-radius: 30px;
+  color: var(--btn-text-hover-color);
+  border-color: var(--primary-color);
+  background-color: var(--btnStyle2-background-hover-color);
+  border-width: 1px;
+  font-weight: bold;
+  padding: 5px 15px;
+  cursor: pointer;
+  margin: 3px;
+  outline: 0px;
+}
+.BtnStyle2:focus {
+  font-size: 13px;
+  border-radius: 30px;
+  color: var(--button-active-color);
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-width: 2px;
+  font-weight: bold;
+  padding: 5px 15px;
+  cursor: pointer;
+  margin: 3px;
+}
+.buttonStyle {
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px 6px;
+  color: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+  margin-left: 5px;
+}
+.buttonStyle:hover {
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px 6px;
+  color: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+  margin-left: 5px;
+}
+.buttonStyle:active {
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 6px;
+  color: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+  margin-left: 5px;
+  background-color: var(--button-style-active);
+}
+.buttonStyleLeft {
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px 8px;
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  margin-left: 5px;
+}
+.buttonStyleLeft:hover {
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 8px;
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  margin-left: 5px;
+  background-color: var(--button-style-hover);
+}
+.buttonStyleLeft:active {
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px 8px;
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  margin-left: 5px;
+  background-color: var(--button-style-active);
+}
+.RowItemStyle {
+  line-height: 40px;
+  text-align: center;
+  background-color: var(--todo-background-color);
+  border-radius: 4px;
+  margin: 2px 2px 10px 2px;
+  padding-left: 12px;
+  box-shadow: 0 0.5rem 1.2rem var(--todo-shadow-color);
+  display: grid;
+  grid-template-columns: 16px auto 100px;
+  grid-gap: 10px;
+}
+.RowItemStyleText {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.RowItemStyleInput {
+  width: 95%;
+  border-radius: 5px;
+  height: 70%;
+  border: 0;
+  outline: none;
+  background-color: var(--RowItem-input-shadow-color);
+}
+
+.todoItemBtn {
+  font-size: 14px;
+  margin: 1px;
+  border-radius: 40%;
+  color: var(--btn-icon-color);
+  background-color: var(--todo-background-color);
+  box-shadow: 0 0.1rem 0.3rem var(--todo-shadow-color);
+}
+.todoItemBtn:hover {
+  font-size: 15px;
+  margin: 1px;
+  border-radius: 40%;
+  color: var(--primary-color);
+  background-color: var(--todo-background-color);
+  box-shadow: 0 0.1rem 0.3rem var(--todo-shadow-color);
+}
+.todoItemBtn:active {
+  font-size: 14px;
+  margin: 1px;
+  border-radius: 40%;
+  color: var(--primary-color);
+  background-color: var(--todo-btn-active);
+  box-shadow: 0 0.1rem 0.3rem var(--todo-shadow-color);
+}
